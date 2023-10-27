@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Ejercicio 3</title>
+</head>
+
+<!------------------------------Body------------------------------>
+
+<body>
+    <header>
+        <h1>Ejercicio 3</h1>
+    </header>
+
+    <section>
+        <p>Ejercicio 3
+
+            Nos proporcionan la clase Consumible. Quieren poder generar consumibles de diferentes tipos, por lo que cada
+            uno podrá tener efectos completamente diferentes.
+
+            class Consumible {
+                constructor(nombre) {
+                    this.nombre = nombre;
+            }
+
+                consumir(jugador) {
+                    onsole.log(jugador.nombre + " consume " + this.nombre + " y no tiene ningún efecto");
+                }
+            }
+
+            let manzana = new Consumible('Manzana');
+            let ricardo = {
+                nombre: 'Ricardo', potencia: 1, puntosVida: 6, maxPuntosVida: 10,
+
+                consumir: function (consumible) {
+                    consumible.consumir(this);
+                }
+            }
+            ricardo.consumir(manzana);
+
+            La clase PlantaCurativa que hereda de la clase Consumible debe permitir generar objetos que recuperen la
+            cantidad de puntos de vida definida por parámetro del constructor y respetando el máximo de puntos de vida
+            del jugador:
+
+            class PlantaCurativa extends Consumible {
+                constructor(nombre, poder) {
+                    // Implementar
+                }
+                consumir(jugador) {
+                    if((this.poder + jugador.puntosVida) > jugador.maxPuntosVida){
+                        /*Si esta condición se cumple es porque el jugador tiene el Máximo de Puntos de Vida. */ //Implementar
+                    }
+                    else{ 
+                        /* En este caso los Puntos de Vida del jugador se incrementan con su poder.*/
+                        //Implementar
+                    }
+                //Implementar: Muestra por consola el nombre del jugador, el nombre de la PlantaCurativa que consume y los
+                puntos de vida que tiene.
+                }
+            }
+            Terminar de implementar la clase PlantaCurativa.
+            Crea un objeto de tipo PlantaCurativa y ejecuta la función consumir(jugador) para que el jugador ricardo
+            consuma la planta.</p>
+        <p>
+        </p>
+        <p>Antes del script...</p>
+
+        <script src="P1_Ejercicio3.js"></script>
+
+        <p>...Después del script</p>
+
+    </section>
+
+
+</body>
+
+</html>
